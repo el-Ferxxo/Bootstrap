@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Toasts</title>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <h1>Toasts</h1>
+    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+          <strong class="me-auto">Bootstrap</strong>
+          <small>11 mins ago</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Hello, world! This is a toast message.
+        </div>
+    </div>
+    <h2>Live example</h2>
+    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+            <strong class="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+            Hello, world! This is a toast message.
+            </div>
+        </div>
+    </div>
+    <h2>Translucent</h2>
+    <section class="p-3 m-0 border-0 bd-example bg-dark">
+        <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+            <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+            <strong class="me-auto">Bootstrap</strong>
+            <small class="text-body-secondary">11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+            Hello, world! This is a toast message.
+            </div>
+        </div>
+    </section>
+    <h2>Stacking</h2>
+    <div class="toast-container position-static">
+        <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+            <strong class="me-auto">Bootstrap</strong>
+            <small class="text-body-secondary">just now</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            See? Just like this.
+          </div>
+        </div>
+      
+        <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+            <strong class="me-auto">Bootstrap</strong>
+            <small class="text-body-secondary">2 seconds ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Heads up, toasts will stack automatically
+          </div>
+        </div>
+    </div>
+    <h2>Custom</h2>
+    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+          Hello, world! This is a toast message.
+          <div class="mt-2 pt-2 border-top">
+            <button type="button" class="btn btn-primary btn-sm">Take action</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Close</button>
+          </div>
+        </div>
+    </div>
+    <h2>Color</h2>
+    <div class="toast align-items-center text-bg-primary border-0 fade show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            Hello, world! This is a toast message.
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+    <h2>Placement</h2>
+    <form>
+        <div class="mb-3">
+          <label for="selectToastPlacement">Toast placement</label>
+          <select class="form-select mt-2" id="selectToastPlacement">
+            <option value="" selected="">Select a position...</option>
+            <option value="top-0 start-0">Top left</option>
+            <option value="top-0 start-50 translate-middle-x">Top center</option>
+            <option value="top-0 end-0">Top right</option>
+            <option value="top-50 start-0 translate-middle-y">Middle left</option>
+            <option value="top-50 start-50 translate-middle">Middle center</option>
+            <option value="top-50 end-0 translate-middle-y">Middle right</option>
+            <option value="bottom-0 start-0">Bottom left</option>
+            <option value="bottom-0 start-50 translate-middle-x">Bottom center</option>
+            <option value="bottom-0 end-0">Bottom right</option>
+          </select>
+        </div>
+    </form>
+    <div aria-live="polite" aria-atomic="true" class="bg-body-secondary position-relative bd-example-toasts rounded-3">
+        <div class="toast-container p-3 top-50 start-50 translate-middle" id="toastPlacement" data-original-class="toast-container p-3">
+            <div class="toast fade show">
+            <div class="toast-header">
+                <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+                <strong class="me-auto">Bootstrap</strong>
+                <small>11 mins ago</small>
+            </div>
+            <div class="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      const toastTrigger = document.getElementById('liveToastBtn')
+      const toastLiveExample = document.getElementById('liveToast')
+
+      if (toastTrigger) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastTrigger.addEventListener('click', () => {
+          toastBootstrap.show()
+        })
+      }
+    </script>
+    <script>
+      const toastPlacement = document.getElementById('toastPlacement')
+      if (toastPlacement) {
+        document.getElementById('selectToastPlacement').addEventListener('change', function () {
+          if (!toastPlacement.dataset.originalClass) {
+            toastPlacement.dataset.originalClass = toastPlacement.className
+          }
+
+          toastPlacement.className = `${toastPlacement.dataset.originalClass} ${this.value}`
+        })
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Popovers</title>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+ </head>
+ <body>
+   <h1>Popovers</h1>
+   <div class="container mt-3">
+      <h3>Popover Example</h3>
+      
+      <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Popover Header" data-bs-content="Some content inside the popover">
+        Toggle popover
+      </button>
+   </div>
+   <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+   <h2>Positioning</h2>
+   <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+      Popover on top
+   </button>
+   <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+      Popover on right
+   </button>
+   <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+      Popover on bottom
+   </button>
+   <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+      Popover on left
+   </button>
+   <h2>Custom</h2>
+   <button type="button" class="btn btn-secondary"
+        data-bs-toggle="popover" data-bs-placement="right"
+        data-bs-custom-class="custom-popover"
+        data-bs-title="Custom popover"
+        data-bs-content="This popover is themed via CSS variables.">
+  Custom popover
+   </button>
+   <h2>Dismissible popover</h2>
+   <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+   <h2>Disabled and hoverable</h2>
+   <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+      <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+   </span>
+
+   <script>
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+      })
+   </script>
+ </body>
+ </html>
